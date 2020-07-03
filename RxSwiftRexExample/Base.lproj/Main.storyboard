@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Counter View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CounterViewController" customModule="RxSwiftRexExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AeN-bD-KKA">
+                                <rect key="frame" x="202" y="437.5" width="10.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehr-Xp-gDm">
+                                <rect key="frame" x="302" y="404" width="88" height="88"/>
+                                <color key="backgroundColor" red="0.9192116857" green="0.48593333729999999" blue="0.1476970846" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="9c4-eP-xc2"/>
+                                    <constraint firstAttribute="width" constant="88" id="mkL-n0-Tja"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="+"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yet another Redux counter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcZ-xy-yNT">
+                                <rect key="frame" x="105" y="213.5" width="204" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsD-1B-Xwf">
+                                <rect key="frame" x="24" y="404" width="88" height="88"/>
+                                <color key="backgroundColor" red="0.9192116857" green="0.48593333729999999" blue="0.1476970846" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="KBf-xz-v2n"/>
+                                    <constraint firstAttribute="height" constant="88" id="pFn-lR-i91"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="-"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gsD-1B-Xwf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2jj-Wr-5dq"/>
+                            <constraint firstItem="Ehr-Xp-gDm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8Yr-78-VVg"/>
+                            <constraint firstItem="AeN-bD-KKA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EQf-FQ-0Qv"/>
+                            <constraint firstItem="HcZ-xy-yNT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JPW-OC-Ve5"/>
+                            <constraint firstItem="gsD-1B-Xwf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="Ry5-3r-4jZ"/>
+                            <constraint firstItem="AeN-bD-KKA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dL0-RY-I0A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ehr-Xp-gDm" secondAttribute="trailing" constant="24" id="gze-3z-0Zq"/>
+                            <constraint firstItem="HcZ-xy-yNT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.5" id="wbl-JG-dFf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="AeN-bD-KKA" id="QHb-KI-oiZ"/>
+                        <outlet property="minusButton" destination="gsD-1B-Xwf" id="49d-Ml-IZG"/>
+                        <outlet property="plusButton" destination="Ehr-Xp-gDm" id="lmm-IL-uXR"/>
+                        <outlet property="titleLabel" destination="HcZ-xy-yNT" id="kl6-Ia-iRR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+</document>
